@@ -2,6 +2,8 @@ import random
 import pyperclip
 import time
 
+# Create a list of all posible caracters
+
 list = [
     "a",
     "b",
@@ -80,6 +82,8 @@ list = [
     "+",
 ]
 
+# Get 10 (or length of password) caracters
+
 car1 = random.choice(list)
 
 car2 = random.choice(list)
@@ -100,7 +104,11 @@ car9 = random.choice(list)
 
 car10 = random.choice(list)
 
+# Create password with chosen caracters
+
 result = car1 + car2 + car3 + car4 + car5 + car6 + car7 + car8 + car9 + car10
+
+# Display password and create file
 
 print("Place name")
 
