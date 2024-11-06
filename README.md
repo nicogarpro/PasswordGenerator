@@ -17,13 +17,11 @@ A simple Python password generator with a simple interface and simple coding, ea
 
 
 # Installation
-[(Back to top)](#table-of-contents)
 
-To use the Password Generator you have to download the `pswgenerator.py` file, which you can download from the [Releases](/releases) section.
+To use the Password Generator you have to download the `pswgenerator.py` file, which you can download from the [Releases](./releases) section.
 
 
 # Usage
-[(Back to top)](#table-of-contents)
 
 When opening the `pswgenerator.py` file, an interface will open, asking for a name.
 - The "Name" is the platform you are using the password on
@@ -31,7 +29,6 @@ When opening the `pswgenerator.py` file, an interface will open, asking for a na
 
 
 # Contribute
-[(Back to top)](#table-of-contents)
 
 This project is still in development, and any contributions would be gratefully accepted.
 
@@ -39,7 +36,6 @@ You can contribute by contacting the developers or leaving a suggestion, bug, or
 
 
 # License
-[(Back to top)](#table-of-contents)
 
 
 [MIT license](./LICENSE)
