@@ -1,8 +1,6 @@
 import random
 import pyperclip
-import time
-
-# Create a list of all posible caracters
+from tkinter import *
 
 list = [
     "a",
@@ -82,8 +80,6 @@ list = [
     "+",
 ]
 
-# Get 10 (or length of password) caracters
-
 car1 = random.choice(list)
 
 car2 = random.choice(list)
@@ -104,33 +100,36 @@ car9 = random.choice(list)
 
 car10 = random.choice(list)
 
-# Create password with chosen caracters
-
 result = car1 + car2 + car3 + car4 + car5 + car6 + car7 + car8 + car9 + car10
 
-# Display password and create file
+root = Tk()
+root.geometry("400x300")
 
-print("Place name")
 
-name = input()
+label = Label(root, text="Enter the name of your platform")
+label.grid(row=0, column=0)
 
-filename = name + " " + "password" + ".txt"
+entry = Entry(root)
+entry.grid(row=1, column=0)
 
-print("")
-print(name)
-print(result)
-print("Coppied password to clipboard")
-file = open(filename, "w")
-file.write("Name: ")
-file.write(name)
-file.write("\n")
-file.write("Password: ")
-file.write(result)
+def text():
+    textname = entry.get()
+    filename = textname + " " + "password" + ".txt"
+    file = open(filename, "x")
+    file.write("Name: ")
+    file.write(textname)
+    file.write("\n")
+    file.write("Password: ")
+    file.write(result)
+    pyperclip.copy(result)
+    #----------------------
+    label2 = Label(root, text=" Password saved in: " + filename + " \nand coppied to clipboard.")
+    label2.grid(row=4, column=0)
+    #----------------------
+    button2 = Button(root, text="Quit", command=quit)
+    button2.grid(row=3, column=0)
 
-pyperclip.copy(result)
+button = Button(root, text="Go", command=text)
+button.grid(row=1, column=1)
 
-time.sleep(3)
-
-sys.exit
-
-# done
+root.mainloop()
